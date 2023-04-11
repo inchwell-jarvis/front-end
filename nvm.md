@@ -1,11 +1,13 @@
 # nvm
 
+### 下载地址
+https://github.com/coreybutler/nvm-windows/releases
+### file文件夹
+https://github.com/inchwell-jarvis/learning/blob/main/file/nvm-setup.exe
 ### 安装
 
 ``` 
-  下载地址
-  https://github.com/coreybutler/nvm-windows/releases
-  下载完成后一直next(下一步)安装即可。 
+下载完成后一直next(下一步)安装即可。 
 ```
 
 ### 命令
