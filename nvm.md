@@ -35,3 +35,14 @@
   
   6. nvm --help //显示命令行帮助信息
 ```
+
+### 下载缓慢问题解决办法
+``` 
+  找到 nvm 的安装目录
+  默认位置：C:\Users\用户名\AppData\Roaming\nvm
+  在settings.txt文件中加入如下代码即可解决问题了：
+```
+```
+  node_mirror: https://npm.taobao.org/mirrors/node/
+  npm_mirror: https://npm.taobao.org/mirrors/npm/
+```
