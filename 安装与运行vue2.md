@@ -29,7 +29,7 @@ npm run dev //运行项目
 # axios
 1.进入项目运行命令
 ``` 
-cnpm install axios --save
+npm install axios --save
 ```  
 2.在需要使用时引入
 ```javascript
