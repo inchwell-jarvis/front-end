@@ -10,6 +10,10 @@
 
 首先，你需要下载Node.js的安装程序。访问Node.js官方网站（[https://nodejs.org](https://nodejs.org)）或 Node.js中文网（[https://nodejs.cn](https://nodejs.cn)），然后选择最新的LTS（长期支持）版本。LTS版本是稳定且有长期维护支持的版本，适合大多数用户。
 
+[Node.js历史版本列表 - 官网](https://nodejs.org/dist/)  
+[Node.js历史版本列表 - 中文网](https://registry.npmmirror.com/binary.html?path=node/)
+
+
 1. 打开你的Web浏览器，访问[Node.js官方网站](https://nodejs.org) 或 Node.js中文网（[https://nodejs.cn](https://nodejs.cn)）。
 2. 在网站的主页上，你将看到两个版本：LTS（Recommended for Most Users）和Current（Latest Features）。选择LTS版本。
 3. 根据你的操作系统（Windows、macOS或Linux），选择相应的安装程序进行下载。
