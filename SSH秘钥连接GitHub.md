@@ -21,14 +21,14 @@
 2.1 如果之前没有创建，则执行以下命令配置信息：
 
 ``` javascript
-git config –global user.name ‘xxxxx’
+git config --global user.name 'xxxxx'
 
-git config –global user.email ‘xxx@xx.xxx’
+git config --global user.email 'xxx@xxx.xxx'
 ```
 
 2.2生成秘钥
 ``` javascript
-ssh-keygen -t rsa -C ‘上面的邮箱’
+ssh-keygen -t rsa -C '上面的邮箱'
 ```
 
 接着按3个回车 则：得到 SHA256 结果即生成成功
@@ -71,5 +71,7 @@ ssh-keygen -t rsa -C ‘上面的邮箱’
 
 在命令窗口上输入 ssh -T git@github.com 按回车键，如看到以下信息，那么就完美了。
 
+```
 Hi 007xiaoyang! You've successfully authenticated, but GitHub does not provide s hell access.
+```
 
