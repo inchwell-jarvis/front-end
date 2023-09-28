@@ -1,20 +1,20 @@
-# 从零创建一个vue2的项目
+# 安装与管理Node.js
 
-我们接下来将模拟从一台新电脑中创建可以运行vue2的开发环境
-
-
-````我们将要安装nvm管理node版本，但鉴于使用nvm安装高版本node时，并不会自带npm还需要手动安装，此次我们便先安装node，然后使用nvm接管node版本，这样即使需要切换node版本也能及时更新```
+我们接下来将模拟从一台新电脑中安装与管理Node.js
 
 
-## 步骤1：下载Node.js
+```我们将首先安装Node.js，然后使用NVM来管理Node.js版本。这是因为在使用NVM安装较高版本的Node.js时，NPM（Node包管理器）通常不会自动安装，需要手动安装。这种方式可以确保我们能够随时切换Node.js版本并保持NPM的及时更新。```
 
-首先，你需要下载Node.js的安装程序。访问Node.js官方网站（[https://nodejs.org](https://nodejs.org)），然后选择最新的LTS（长期支持）版本。LTS版本是稳定且有长期维护支持的版本，适合大多数用户。
 
-1. 打开你的Web浏览器，访问[Node.js官方网站](https://nodejs.org)。
+# Node.js
+
+首先，你需要下载Node.js的安装程序。访问Node.js官方网站（[https://nodejs.org](https://nodejs.org)）或 Node.js中文网（[https://nodejs.cn](https://nodejs.cn)），然后选择最新的LTS（长期支持）版本。LTS版本是稳定且有长期维护支持的版本，适合大多数用户。
+
+1. 打开你的Web浏览器，访问[Node.js官方网站](https://nodejs.org) 或 Node.js中文网（[https://nodejs.cn](https://nodejs.cn)）。
 2. 在网站的主页上，你将看到两个版本：LTS（Recommended for Most Users）和Current（Latest Features）。选择LTS版本。
 3. 根据你的操作系统（Windows、macOS或Linux），选择相应的安装程序进行下载。
 
-## 步骤2：安装Node.js
+## 安装Node.js
 
 安装Node.js非常简单，只需按照以下步骤操作：
 
@@ -56,4 +56,87 @@
 
    如果成功安装，你将看到它们的版本号。
 
-恭喜！你已经成功在你的新电脑上安装了Node.js和npm。现在，你可以开始编写和运行Node.js应用程序了。如果需要额外的Node.js模块或包，可以使用npm来安装它们。希望这个教程对你有所帮助！
+
+如果你已经在计算机上安装了Node.js，并想要使用NVM（Node Version Manager）来管理和切换当前的Node.js版本，以下是你需要执行的步骤：
+
+# NVM
+
+### 官方下载地址
+https://github.com/coreybutler/nvm-windows/releases
+### 我的文件夹
+https://github.com/inchwell-jarvis/learning/blob/main/file/nvm-setup.exe
+### 安装
+
+``` 
+下载完成后一直next(下一步)安装即可。 
+```
+
+### 命令
+``` 
+  1. nvm -v //查看nvm版本
+    nvm --version ：显示 nvm 版本
+  
+  
+  2. nvm list //显示版本列表
+    nvm list ：显示已安装的版本（同 nvm list installed
+    nvm list installed：显示已安装的版本
+    nvm list available：显示所有可以下载的版本
+  
+  3. nvm install //安装指定版本node.js
+    nvm install 14.5.0：安装 14.5.0 版本的 node.js
+    nvm install latest：安装最新版本
+  
+  4. nvm use //使用指定版本node
+    nvm use 14.5.0： 切换到 14.5.0 版本的 node.js
+    --lts // 自动切换到长期支持版本
+    --lts=<LTS name> // 自动切换到指定名称的node长期支持版本
+  
+  5. nvm uninstall <version> //卸载指定版本 node
+    nvm uninstall 14.5.0：卸载到 14.5.0 版本的 node.js
+    nvm uninstall --lts // 卸载长期支持版本的node
+    nvm uninstall --lts=<LTS name> // 卸载一个指定名称的长期支持版本的node
+  
+  6. nvm --help //显示命令行帮助信息
+```
+
+### 下载缓慢问题解决办法
+``` 
+  找到 nvm 的安装目录
+  默认位置：C:\Users\用户名\AppData\Roaming\nvm
+  在settings.txt文件中加入如下代码即可解决问题了：
+```
+```
+  node_mirror: https://npm.taobao.org/mirrors/node/
+  npm_mirror: https://npm.taobao.org/mirrors/npm/
+```
+
+### 接管当前Node.js版本
+
+安装NVM后，你可以使用它来接管当前已经安装的Node.js版本。
+
+1. 首先，列出你计算机上已经安装的Node.js版本：
+
+   ```bash
+   nvm ls
+   ```
+
+   这将显示所有已安装的Node.js版本。
+
+2. 接管当前Node.js版本，运行以下命令（假设你要接管的版本是Node.js 16.0.0）：
+
+   ```bash
+   nvm use 16.0.0
+   ```
+
+   NVM将会切换当前Shell会话中的Node.js版本为16.0.0。
+
+3. 验证当前Node.js版本是否已更改：
+
+   ```bash
+   node -v
+   ```
+
+    确保显示的版本与你选择的版本（16.0.0）匹配。
+
+    现在，你已成功使用NVM接管了当前的Node.js版本。你可以在需要时轻松切换到其他Node.js版本，以满足不同项目的需求。
+
