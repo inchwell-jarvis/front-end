@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button  id="downloadButton">下载</button>
+</body>
+<script>
+    const links = [
+        'http://39.100.116.85:6001/File/CEcertificateFile/81899821-959d-40d1-ae30-3564a97eedcb_WHOLECE.pdf',
+        'http://39.100.116.85:6001/File/CEcertificateFile/317b28f1-ceac-434a-b5b7-a5f3b2b258f5_WHOLECE.pdf'
+    ];
+
+    document.getElementById('downloadButton').addEventListener('click', function () {
+        links.forEach(link => {
+            downloadFile(link);
+        });
+    });
+
+    function downloadFile(url) {
+        fetch(url)
+            .then(response => response.blob())
+            .then(blob => {
+                const a = document.createElement('a');
+                const url = window.URL.createObjectURL(blob);
+                a.href = url;
+                a.download = 'file.pdf'; // 设置下载文件名
+                document.body.appendChild(a);
+                a.click();
+                window.URL.revokeObjectURL(url);
+                document.body.removeChild(a);
+            })
+            .catch(error => {
+                console.error('Download failed:', error);
+            });
+    }
+</script>
+
+</html>
